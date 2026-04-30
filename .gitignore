@@ -1,0 +1,64 @@
+# 🔐 Credenciais e variáveis de ambiente
+
+.env
+.env.*
+*.env
+firebase_key.json
+
+# 🐍 Python
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# 🧪 Virtualenv
+
+venv/
+.venv/
+env/
+ENV/
+
+# 📦 Build / distribuição
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 🧾 Logs
+
+*.log
+
+# 🧠 IDE / editor
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 🖼️ Imagens temporárias (caso você salve localmente)
+
+*.jpg
+*.jpeg
+*.png
+
+# 🧪 Jupyter
+
+.ipynb_checkpoints/
+
+# 🧬 Sistema
+
+.DS_Store
+Thumbs.db
+
+# 🔥 TensorFlow / CUDA (logs e caches)
+
+*.h5
+*.pb
+*.ckpt
+logs/
+
+# 📁 Arquivos temporários gerais
+
+tmp/
+temp/
