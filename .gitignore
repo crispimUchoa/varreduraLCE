@@ -12,7 +12,8 @@ firebase_key.json
 *$py.class
 
 # 🧪 Virtualenv
-
+fotos/
+novatos/
 venv/
 .venv/
 env/
