@@ -1,13 +1,13 @@
-name: Run daily job
-
-on:
-  schedule:
-    - cron: "0 21 * * *"  # 18h Fortaleza (UTC-3)
-  workflow_dispatch:      # botão pra rodar manual
-
 jobs:
   run-job:
     runs-on: ubuntu-latest
+
+    env:
+      FIREBASE_CREDENTIALS: ${{ secrets.FIREBASE_CREDENTIALS }}
+      APPWRITE_API_KEY: ${{ secrets.APPWRITE_API_KEY }}
+      APPWRITE_PROJECT_ID: ${{ secrets.APPWRITE_PROJECT_ID }}
+      APPWRITE_END_POINT: ${{ secrets.APPWRITE_END_POINT }}
+      APPWRITE_BUCKET_ID: ${{ secrets.APPWRITE_BUCKET_ID }}
 
     steps:
       - name: Clonar repo

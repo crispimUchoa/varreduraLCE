@@ -70,7 +70,7 @@ ontem = inicio - timedelta(days=1)
 print('\nPontos:')
 
 def main(bucketId):
-    records = db.collection_group('clockRecords').where("in", ">=", inicio).where("out", "<", fim).stream()
+    records = db.collection_group('clockRecords').where("in", ">=", ontem).where("out", "<", inicio).stream()
 
 
     for doc in records:
@@ -113,7 +113,7 @@ def main(bucketId):
             userPic = getImageFromAppWrite(bucketId, userId)
             isSameUser = compare(inPic, userPic)
 
-            if(not isSameUser and not compare2(inPic, userPic)):
+            if(not isSameUser and not compare2(inPic, userPic) and not compare2(outPic, userPic)):
                 ref.update({
                     'verified': True,
                     'isValid': False,
