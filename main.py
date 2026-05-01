@@ -70,7 +70,7 @@ ontem = inicio - timedelta(days=1)
 print('\nPontos:')
 
 def main(bucketId):
-    records = db.collection_group('clockRecords').where("in", ">=", ontem).where("out", "<", inicio).stream()
+    records = db.collection_group('clockRecords').where("in", ">=", inicio).where("out", "<", fim).stream()
 
 
     for doc in records:
